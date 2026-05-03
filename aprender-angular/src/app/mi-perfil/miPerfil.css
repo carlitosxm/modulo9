@@ -1,0 +1,39 @@
+section {
+    max-width: 450px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: sans-serif;
+    color: #444;
+  }
+  
+  h1 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    color: #000;
+  }
+  
+  p, span {
+    display: block;
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+  
+  strong {
+    font-weight: 600;
+    color: #222;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+  }
+  
+  address {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
