@@ -27,4 +27,16 @@ export class miPerfil {
 
         console.log("Se cargó el componente de perfil correctamente.");
     }
+
+    ngDoCheck(){
+        console.log("El componente actualizado");
+    }
+
+    cambiarEdad(){
+        this.edad=40;
+    }
+
+    cambiarDireccion(){
+        this.direccion="Dirección";
+    }
 }

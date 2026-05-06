@@ -25,4 +25,16 @@ export class Producto {
         this.precio = 475;
         this.descripcion="mi producto es un ordenador";
     }
+
+    ngOnInit(){
+        console.log("El componente esta inicializaando");
+    }
+
+    ngOnChange(){
+        console.log("Componente actualizado");
+    }
+
+    cambiarNombre(){
+        this.nombre="ASUS 177h"
+    }
 }
