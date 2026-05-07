@@ -17,6 +17,7 @@ export class miPerfil {
     public ocupacion: string;
     public direccion: string;
     public telefono: string;
+    public mostrar: boolean=true;
 
     constructor() {
         this.nombre=" Juan Pérez.";
@@ -38,5 +39,9 @@ export class miPerfil {
 
     cambiarDireccion(){
         this.direccion="Dirección";
+    }
+
+    mostrarComponente(val: boolean){
+        this.mostrar = val;
     }
 }

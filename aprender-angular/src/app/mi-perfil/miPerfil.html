@@ -1,22 +1,32 @@
 <section>
-    <h1>Perfil de Usuario</h1>
-    <p><strong>Mi nombre es:</strong> {{nombre}}</p>
-    <p>Tengo {{edad}} años.</p>
-    <span>{{ocupacion}}</span>
-  
-    <hr>
-    <address>
-      Mi dirección es {{direccion}}<br>
-      Mi teléfono es {{telefono}}.
-    </address>
+  <h1>Perfil de Usuario</h1>
+  <p><strong>Mi nombre es:</strong> {{nombre}}</p>
+  <p>Tengo {{edad}} años.</p>
+  <span>{{ocupacion}}</span>
 
-    <button (click)="cambiarEdad()">Cambiar Edad</button>
-    <button (click)="cambiarDireccion()">Cambiar Direccion</button>
+  <hr>
+  <address>
+    Mi dirección es {{direccion}}<br>
+    Mi teléfono es {{telefono}}.
+  </address>
 
-    <app-cuenta></app-cuenta>
-    <app-transacciones></app-transacciones>
-    <app-prestamos></app-prestamos>
+  <button (click)="cambiarEdad()">Cambiar Edad</button>
+  <button (click)="cambiarDireccion()">Cambiar Direccion</button>
+  <br>
+  @if (mostrar == true) {
+  <button (click)="mostrarComponente(false)">Ocultar Componente</button>
+  }
+  @else {
+  <button (click)="mostrarComponente(true)">Mostrar Componente</button>
+  }
+  <br>
+  @if (mostrar == true) {
+  <app-cuenta></app-cuenta>
+  }
+
+  <app-transacciones></app-transacciones>
+  <app-prestamos></app-prestamos>
 
 
 
-  </section>
+</section>

@@ -1,10 +1,20 @@
 <h1>{{nombre}}</h1>
-    <h2>{{descripcion}}</h2>
-    <h3>{{marca}}</h3>
-    <strong>{{precio}}</strong>
+<h2>{{descripcion}}</h2>
+<h3>{{marca}}</h3>
+<strong>{{precio}}</strong>
+<br>
+<button (click)="cambiarNombre()">cambiar nombre</button>
+<br>
 
-    <button (click)="cambiarNombre()">cambiar nombre</button>
+{{mostrar_peliculas}}
 
-    <app-usuario></app-usuario>
-    <app-pelicula></app-pelicula>
-    <app-ventas></app-ventas>
+@if(mostrar_peliculas==true){
+<button (click)="ocultarPeliculas(false)">ocultar pelicula</button>
+}@else{
+<button (click)="ocultarPeliculas(true)">mostrar pelicula</button>
+}
+<br>
+
+@if(mostrar_peliculas==true){
+<app-pelicula></app-pelicula>
+}

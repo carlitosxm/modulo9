@@ -7,6 +7,7 @@ import { Ventas } from "../ventas/ventas";
 @Component({
     selector: "mi-producto",
     imports:[Pelicula,Usuario,Ventas],
+    standalone: true,
     templateUrl: "producto.html",
     styleUrl: "producto.css"
 })
@@ -18,6 +19,7 @@ export class Producto {
     public precio: number;
     public descripcion: string;
 
+    public mostrar_peliculas: boolean=true;
 
     constructor() {
         this.nombre = "PORTATIL";
@@ -34,7 +36,15 @@ export class Producto {
         console.log("Componente actualizado");
     }
 
+    ngAfterViewInit(){
+        console.log("La vista esta cargada");
+    }
+
     cambiarNombre(){
         this.nombre="ASUS 177h"
+    }
+
+    ocultarPeliculas(valor: boolean){
+        this.mostrar_peliculas=valor;
     }
 }
