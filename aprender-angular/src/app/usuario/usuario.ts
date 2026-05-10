@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Ventas } from '../ventas/ventas';
 
 @Component({
   selector: 'app-usuario',
-  imports: [],
+  imports: [Ventas],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
@@ -25,6 +26,13 @@ export class Usuario {
     }
   }
 
+  usuario={
+    id:1,
+    nombre:"Carlos Palacios",
+    nick: "CarlosDev",
+    rol:"user"
+  };
+  
   ngOnInit(){
     this.marcasAutos=[];
   }

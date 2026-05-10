@@ -26,3 +26,19 @@ target="_blank">Is a la web</a>
         <li>el listado esta vacio</li>
     }
 </ul>
+
+@if (usuario.rol=="admin") {
+    <app-ventas></app-ventas>
+}
+
+@switch (usuario.rol) {
+    @case ("admin") {
+        <app-ventas></app-ventas>
+    }
+    @case ("user") {
+        <p>Eres un usuario normal</p>
+    }
+    @default {
+        <p>Ese un invitados</p>
+    }
+}

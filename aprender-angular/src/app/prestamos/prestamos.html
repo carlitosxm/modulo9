@@ -1,17 +1,15 @@
 <p>prestamos works!</p>
 
-<a [href]="web"
-[class.existe] = "estadoMensaje"
-[style.font-size.px]="estadoMensaje ? 25 : 12"
-target="_blank">Ir a la web</a>
+<a [href]="web" [class.existe]="estadoMensaje" [style.font-size.px]="estadoMensaje ? 25 : 12" target="_blank">Ir a la
+    web</a>
 <br>
 <br>
 
 
 @if (estadoMensaje) {
-    <a [style.font-size.px]="25">¡El enlace funciona correctamente!</a>
+<a [style.font-size.px]="25">¡El enlace funciona correctamente!</a>
 }@else{
-    <a [style.font-size.px]="12">Lo sentimos, este enlace no está disponible.</a>
+<a [style.font-size.px]="12">Lo sentimos, este enlace no está disponible.</a>
 }
 <br>
 <br>
@@ -20,14 +18,29 @@ target="_blank">Ir a la web</a>
 <br><br>
 <h3>listado</h3>
 <ul>
-@for (item of prestamosList; track item.id) {
-            <li [style.background-color]="item.estado === 'Aprobado' ? 'green' : 'red'"
+    @for (item of prestamosList; track item.id) {
+    <li [style.background-color]="item.estado === 'Aprobado' ? 'green' : 'red'"
         style="color: white; padding: 10px; margin-bottom: 5px; list-style: none; border-radius: 5px;">
-      Id: {{item.id}} | Estado: {{item.estado}} | Monto: ${{item.monto}}
+        Id: {{item.id}} | Estado: {{item.estado}} | Monto: ${{item.monto}}
     </li>
     }
-    
+
     @empty{
-        <li>lista vacia !!</li>
+    <li>lista vacia !!</li>
     }
 </ul>
+
+@switch (prestamo.tipo){
+    @case ("personal") {
+        <p>prestamo {{prestamo.tipo}} con interenes del {{prestamo.interes}}%</p>
+    }
+    @case ("hipotecario") {
+        <app-transacciones></app-transacciones>
+    }
+    @case ("vehicular") {
+        <p>el prestamo es para la compra de un vehiculo</p>
+    }
+    @default {
+        <p>tipo de prestamo no encontrado</p>
+    }
+}

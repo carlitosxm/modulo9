@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [],
+  imports: [Transacciones],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
@@ -18,12 +19,13 @@ export class Prestamos {
     { id: 6, monto: 2200, estado: "Pendiente" }
   ];
 
+  prestamo={
+    id:1,
+    tipo:"vehicula",
+    interes:10
+  }
 
   mostrarMensaje(){
-    if (!this.estadoMensaje){
-      this.estadoMensaje=true;
-    }else{
-      this.estadoMensaje=false;
-    }
+    this.estadoMensaje=!this.estadoMensaje;
   }
 }
