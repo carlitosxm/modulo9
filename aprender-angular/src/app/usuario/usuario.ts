@@ -10,6 +10,12 @@ export class Usuario {
 
   web ="https://amazon.com"; 
   redirigir = false;
+  marcasAutos=[
+    {id:1, nombre:"Toyota"},
+    {id:2, nombre:"Kia"},
+    {id:3, nombre:"Chevrolet"},
+    {id:4, nombre:"Suzuki"},
+    {id:5, nombre:"Mazda"}];
 
   cambioRedireccion(){
     if(this.redirigir==false){
@@ -17,6 +23,10 @@ export class Usuario {
     }else{
       this.redirigir=false;
     }
+  }
+
+  ngOnInit(){
+    this.marcasAutos=[];
   }
 }
 

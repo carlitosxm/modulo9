@@ -16,3 +16,13 @@ target="_blank">Is a la web</a>
 }
 
 <button (click)="cambioRedireccion()">cambio</button>
+
+<h3>Marcas Autos</h3>
+
+<ul>
+    @for (item of marcasAutos; track item.id; let indice = $index, contador=$count, par=$even, impar=$odd) {
+        <li>{{item.nombre}}  {{indice}}  {{contador}}  {{par}}</li>
+    } @empty {
+        <li>el listado esta vacio</li>
+    }
+</ul>

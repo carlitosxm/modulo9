@@ -16,3 +16,18 @@ target="_blank">Ir a la web</a>
 <br>
 <br>
 <button (click)="mostrarMensaje()">cambio</button>
+
+<br><br>
+<h3>listado</h3>
+<ul>
+@for (item of prestamosList; track item.id) {
+            <li [style.background-color]="item.estado === 'Aprobado' ? 'green' : 'red'"
+        style="color: white; padding: 10px; margin-bottom: 5px; list-style: none; border-radius: 5px;">
+      Id: {{item.id}} | Estado: {{item.estado}} | Monto: ${{item.monto}}
+    </li>
+    }
+    
+    @empty{
+        <li>lista vacia !!</li>
+    }
+</ul>
