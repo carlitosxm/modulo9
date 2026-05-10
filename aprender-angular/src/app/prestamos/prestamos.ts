@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
-export class Prestamos {}
+export class Prestamos {
+  web ="https://amazon.com"; 
+  estadoMensaje=false;
+
+  
+  mostrarMensaje(){
+    if (!this.estadoMensaje){
+      this.estadoMensaje=true;
+    }else{
+      this.estadoMensaje=false;
+    }
+  }
+}
