@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, CurrencyPipe, JsonPipe } from '@angular/common';
 import { Ventas } from '../ventas/ventas';
+import { ɵEmptyOutletComponent } from "@angular/router";
+import { Producto } from '../producto/producto';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas],
+  imports: [Ventas , UpperCasePipe, LowerCasePipe, DatePipe ,TitleCasePipe, CurrencyPipe, JsonPipe],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
@@ -32,6 +35,9 @@ export class Usuario {
     nick: "CarlosDev",
     rol:"user"
   };
+
+  saldoCuenta: number = 2540.75; 
+  fechaRegistro: Date = new Date();
   
   ngOnInit(){
     this.marcasAutos=[];

@@ -42,3 +42,23 @@ target="_blank">Is a la web</a>
         <p>Ese un invitados</p>
     }
 }
+
+<h3>mas cosas de las plantillas de angular</h3>
+
+
+<h2>tuberias en angular</h2>
+
+{{web | lowercase}}
+
+<h2>Práctica de Pipes - Evidencia</h2>
+<hr>
+
+<!-- Pipes del Video -->
+<p><strong>Original:</strong> {{ usuario.nombre }}</p>
+<p><strong>UpperCase:</strong> {{ usuario.nombre | uppercase }}</p>
+<p><strong>LowerCase:</strong> {{ usuario.nick | lowercase }}</p>
+<p><strong>TitleCase:</strong> {{ usuario.rol | titlecase }}</p>
+<hr>
+<p><strong>CurrencyPipe (Saldo):</strong> {{ saldoCuenta | currency:'USD':'symbol' }}</p>
+<p><strong>JsonPipe (Estructura Objeto):</strong></p>
+<pre>{{ usuario | json }}</pre>
