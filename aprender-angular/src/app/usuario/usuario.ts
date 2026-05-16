@@ -3,10 +3,12 @@ import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, CurrencyPipe, Js
 import { Ventas } from '../ventas/ventas';
 import { ɵEmptyOutletComponent } from "@angular/router";
 import { Producto } from '../producto/producto';
+import { cambiaLetrasPipes } from '../pipes/cambiaLeras';
+import { transformarAscciPipes } from '../pipes/transforAscii';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas , UpperCasePipe, LowerCasePipe, DatePipe ,TitleCasePipe, CurrencyPipe, JsonPipe],
+  imports: [Ventas , cambiaLetrasPipes, transformarAscciPipes, UpperCasePipe, LowerCasePipe, DatePipe ,TitleCasePipe, CurrencyPipe, JsonPipe],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
