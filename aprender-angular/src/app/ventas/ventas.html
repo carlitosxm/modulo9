@@ -1,4 +1,9 @@
 <p>ventas works!</p>
 <h1>Directivas Angular</h1>
-<h2 [ngClass]= "mostrar == 'si' ? 'resaltar' : 'destarcarMenos'">Soy un programador </h2>
+<h2 [ngClass]="mostrar == 'si' ? 'resaltar' : 'destarcarMenos'">Soy un programador </h2>
 
+<h2 [ngStyle]="mostrar == 'si' ? {'background-color': 'green'} : {'background-color': 'red'}">Soy un estudiane </h2>
+
+
+<p [ngStyle]="misEstilos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum exercitationem, tempore harum dolores ipsum sed
+    tempora ab fuga in iusto facilis, sapiente totam magnam, praesentium ex provident a unde veritatis.</p>
