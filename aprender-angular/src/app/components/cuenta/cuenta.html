@@ -1,0 +1,9 @@
+<p>cuenta works!</p>
+
+
+<H3>DATOS CLIENTE</H3>
+<ul>
+@for (cliente of clientes; track cliente.id) {
+    <li> {{cliente.nombre}} {{cliente.apellido}} {{cliente.email}} {{cliente.saldoCuenta}} </li>
+}
+</ul>

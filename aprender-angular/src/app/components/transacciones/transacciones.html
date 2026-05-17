@@ -1,0 +1,9 @@
+<p>transacciones works!</p>
+
+<h3>LISTA DE TRANSACCIONES</h3>
+
+<ol>
+    @for (transacciones of transaccionesList; track transacciones.id) {
+        <li> {{transacciones.fecha}} {{transacciones.descripcion}} {{transacciones.monto}} {{transacciones.tipo}}</li>
+    }
+</ol>

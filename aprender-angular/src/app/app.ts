@@ -1,16 +1,20 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Producto } from './producto/producto';
-import { miPerfil } from './mi-perfil/miPerfil';
-import { Usuario } from './usuario/usuario';
-import { Ventas } from './ventas/ventas';
+import { Producto } from './components/producto/producto';
+import { miPerfil } from './components/mi-perfil/miPerfil';
+import { Usuario } from './components/usuario/usuario';
+import { Ventas } from './components/ventas/ventas';
+import { config } from './models/config';
+import { Cine } from './components/cine/cine';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Producto ,miPerfil, Usuario, Ventas],
+  imports: [RouterOutlet, Producto ,miPerfil, Usuario, Ventas, Cine],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('Bienvenido ,este es mi nuevo proyecto de práctica');
+  titulo = config.title;
+  descripcion=config.description;
 }
