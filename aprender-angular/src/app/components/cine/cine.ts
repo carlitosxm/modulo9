@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
 import { FormsModule } from '@angular/forms';
+import { NgStyle } from "@angular/common";
 
 @Component({
   selector: 'app-cine',
-  imports: [FormsModule],
+  imports: [FormsModule, NgStyle],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
@@ -12,6 +13,7 @@ export class Cine {
   public titulo?: string;
   public peliculas: Array<Pelicula>;
   public preliculassinDatos: string[] =[];
+  public color:string="#ffffff";
   ////////para trbajar con formulario y binding bidireccional
 
   public mi_pelicula: string ="";  
@@ -51,5 +53,9 @@ export class Cine {
        let identificador= this.peliculas[this.peliculas.length-1].id+1;
        let new_pelicula= new Pelicula(identificador,this.mi_pelicula);
        this.peliculas.push(new_pelicula);
+  }
+
+  deletePelicula(indice:number){
+    this.peliculas.splice(indice,1);
   }
 }

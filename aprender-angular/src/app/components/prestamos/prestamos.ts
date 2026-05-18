@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { Transacciones } from '../transacciones/transacciones';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-prestamos',
-  imports: [Transacciones],
+  imports: [Transacciones,FormsModule],
   templateUrl: './prestamos.html',
   styleUrl: './prestamos.css',
 })
 export class Prestamos {
   web ="https://amazon.com"; 
+  montoNewPrestamo:number=0;
   estadoMensaje=false;
   prestamosList = [
     { id: 1, monto: 1500, estado: "Aprobado" },
@@ -27,5 +29,16 @@ export class Prestamos {
 
   mostrarMensaje(){
     this.estadoMensaje=!this.estadoMensaje;
+  }
+
+  eliminarPerstamo(id:number){
+    this.prestamosList.splice(id,1);
+    console.log("Prestamo eliminado");
+  }
+
+  agregarPrestamo(){
+    let num:number = this.prestamosList.length+1;
+    this.prestamosList.push( {id: num, monto: this.montoNewPrestamo, estado: "Pendiente" });
+    console.log("Prestamo agregado");
   }
 }
