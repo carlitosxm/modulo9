@@ -7,3 +7,10 @@
         <li> {{transacciones.fecha}} {{transacciones.descripcion}} {{transacciones.monto}} {{transacciones.tipo}}</li>
     }
 </ol>
+
+<input type="text" [(ngModel)]="descripcionTransaccion"/>
+
+<button (click)="mostrarValor()">Mostrar Transacción</button>
+@if (monto) {
+    <p>Mi transacción es: {{monto}} </p>
+}

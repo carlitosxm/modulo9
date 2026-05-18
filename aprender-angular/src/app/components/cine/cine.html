@@ -7,3 +7,21 @@
         <li> {{pelicula.id}} {{pelicula.titulo}}  {{pelicula.genero}} {{pelicula.plataforma}}  </li>
     }
 </ul>
+
+<h1>Formulario y two way date binding</h1>
+
+<input type="text" [(ngModel)] ="mi_pelicula" />
+
+<p>
+Mi pelicula es: <strong>{{mi_pelicula}}</strong>
+</p>
+
+<button (click)="showPelicula()">Mostrar pelicula</button>
+
+<button (click)="addPelicula()">añadir nueva pelicula</button>
+
+<ul>
+    @for (pelicula of preliculassinDatos; track pelicula) {
+        <li> {{pelicula}}</li>
+    }
+</ul>

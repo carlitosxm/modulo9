@@ -47,4 +47,6 @@ export class Producto {
     ocultarPeliculas(valor: boolean){
         this.mostrar_peliculas=valor;
     }
+
+
 }

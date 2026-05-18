@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-transacciones',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './transacciones.html',
   styleUrl: './transacciones.css',
 })
 export class Transacciones {
    public transaccionesList:Array<Transaccion>;
+   public descripcionTransaccion:string = "";
+   public monto:string="";
 
   constructor() {
     // Inicializamos con 6 objetos de ejemplo usando 'new'
@@ -22,4 +25,11 @@ export class Transacciones {
     ];
   }
 
+  ngDoCheck(){
+    console.log(this.descripcionTransaccion);
+  }
+
+  mostrarValor(){
+    this.monto = this.descripcionTransaccion;
+  }
 }

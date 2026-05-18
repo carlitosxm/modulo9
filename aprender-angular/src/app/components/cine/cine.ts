@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cine',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
 export class Cine {
   public titulo?: string;
   public peliculas: Array<Pelicula>;
+  public preliculassinDatos: string[] =[];
+  ////////para trbajar con formulario y binding bidireccional
+
+  public mi_pelicula: string ="";  
 
   constructor() {
     this.titulo = "Modelos";
@@ -33,4 +38,18 @@ export class Cine {
     this.peliculas[1].titulo = "THE MATRIX"
   }
 
+  ngDoCheck(){
+    console.log(this.mi_pelicula)
+  }
+
+  showPelicula(){
+    alert(this.mi_pelicula);
+  }
+
+  addPelicula(){
+       //this.preliculassinDatos.push(this.mi_pelicula);
+       let identificador= this.peliculas[this.peliculas.length-1].id+1;
+       let new_pelicula= new Pelicula(identificador,this.mi_pelicula);
+       this.peliculas.push(new_pelicula);
+  }
 }
