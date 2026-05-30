@@ -18,6 +18,13 @@ export class miPerfil {
     public direccion: string;
     public telefono: string;
     public mostrar: boolean=true;
+    public nombreCliente:string ="Juan Perez";
+
+    public mensajeRecibido:string="";
+
+    recibirMensaje(mensaje:string){
+        this.mensajeRecibido=mensaje;
+    }
 
     constructor() {
         this.nombre=" Juan Pérez.";

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Cliente } from '../../models/cliente';
 
 @Component({
@@ -9,6 +9,7 @@ import { Cliente } from '../../models/cliente';
 })
 export class Cuenta {
 
+  @Input() nombreCliente:string ="";
   public clientes:Array<Cliente>;
 
   constructor(){

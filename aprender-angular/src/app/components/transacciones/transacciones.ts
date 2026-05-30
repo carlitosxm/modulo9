@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
 import { FormsModule } from '@angular/forms';
 
@@ -9,6 +9,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './transacciones.css',
 })
 export class Transacciones {
+@Output() mensajeEnviado= new EventEmitter();
+
+enviarSaludo(){
+  this.mensajeEnviado.emit("Hola desde Transacciones!");
+}
+
    public transaccionesList:Array<Transaccion>;
    public descripcionTransaccion:string = "";
    public monto:string="";

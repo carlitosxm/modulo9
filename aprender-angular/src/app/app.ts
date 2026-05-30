@@ -6,10 +6,12 @@ import { Usuario } from './components/usuario/usuario';
 import { Ventas } from './components/ventas/ventas';
 import { config } from './models/config';
 import { Cine } from './components/cine/cine';
+import { Padre } from "./components/padre/padre";
+import { Hijo } from "./components/hijo/hijo";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Producto ,miPerfil, Usuario, Ventas, Cine],
+  imports: [RouterOutlet, Producto, miPerfil, Usuario, Ventas, Cine, Padre, Hijo],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

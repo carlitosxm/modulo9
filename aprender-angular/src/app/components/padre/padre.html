@@ -1,0 +1,14 @@
+<p>padre works!</p>
+
+<hr>
+
+<h1>Soy el componente padre</h1>
+<p>soy un componente que tiene otro componenete y ese es mi app-hijo</p>
+
+<p>Te presento a mi hijo</p>
+
+{{saludoRecibido}}
+
+<app-hijo [nombrePadre]="nombre" 
+    (saludoHijo)="recibirSaludo($event)"
+></app-hijo>

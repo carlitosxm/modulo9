@@ -21,10 +21,12 @@
   }
   <br>
   @if (mostrar == true) {
-  <app-cuenta></app-cuenta>
+  <app-cuenta [nombreCliente]="nombreCliente" ></app-cuenta>
   }
-
-  <app-transacciones></app-transacciones>
+  {{mensajeRecibido}}
+  <app-transacciones
+  (mensajeEnviado)="recibirMensaje($event)"
+  ></app-transacciones>
   <app-prestamos></app-prestamos>
 
 
