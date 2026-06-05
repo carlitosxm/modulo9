@@ -1,0 +1,31 @@
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    gap: 15px;
+    background-color: #2c3e50;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Enlaces en estado normal */
+  .navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover */
+  .navbar a:hover {
+    background-color: #34495e;
+  }
+  
+  /* ESTA REGLA ES LA CLAVE: Aplica el resaltado solicitado */
+  .navbar a.activo {
+    background-color: #3498db !important; /* Fondo azul */
+    color: #ffffff !important;            /* Texto blanco */
+    font-weight: bold !important;         /* Texto en negrita */
+  }

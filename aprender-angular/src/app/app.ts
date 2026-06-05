@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterLink } from '@angular/router';
 import { Producto } from './components/producto/producto';
 import { miPerfil } from './components/mi-perfil/miPerfil';
 import { Usuario } from './components/usuario/usuario';
@@ -11,7 +11,7 @@ import { Hijo } from "./components/hijo/hijo";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Producto, miPerfil, Usuario, Ventas, Cine, Padre, Hijo],
+  imports: [RouterOutlet, Producto, miPerfil, Usuario, Ventas, Cine, Padre, Hijo, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
